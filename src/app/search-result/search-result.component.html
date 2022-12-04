@@ -1,1 +1,15 @@
-<p>search-result works!</p>
+<div class="container">
+  <button type="button" class="btn" routerLink="/">Voltar</button>
+  <div
+    [title]="userRepo.name"
+    class="item animate__animated animate__bounceIn"
+    *ngFor="let userRepo of userRepos | async"
+  >
+    <h3 class="item-name">{{ userRepo.name }}</h3>
+    <p class="item-description">{{ userRepo.description }}</p>
+    <a>{{ userRepo.html_url }}</a>
+    <h4 class="item-language">{{ userRepo.language }}</h4>
+    <p class="item-date">{{ userRepo.created_at }}</p>
+    <p>{{ userRepo.owner.login }}</p>
+  </div>
+</div>
