@@ -1,12 +1,19 @@
-<div class="index">
-    <div class="container">
-        <div>
-            <h2 class="titulo"><span>Angular</span>Hub</h2>
-            <h4>INSIRA UM NOME DE USUÁRIO DO GITHUB</h4>
-            <form action="" method="get">
-                <input [(ngModel)]="user" id="campo" type="text" name="user">
-                <button (click)="buscar()">BUSCAR</button>
-            </form>
-        </div>
-    </div>
+<div class="container">
+  <h1 class="main-title animate__animated animate__fadeIn">
+    Angular<span class="main-title-hub">Hub</span>
+  </h1>
+
+  <div class="container container-main animate__animated animate__backInLeft">
+    <p>Informe o nome de usuário do github a ser buscado:</p>
+    <input
+      id="username-input"
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Username"
+    />
+    <button routerLink="{{ username }}" type="button" class="btn">
+      Buscar
+    </button>
+  </div>
 </div>

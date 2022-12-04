@@ -1,65 +1,35 @@
-.index {
-    background: linear-gradient(#333 15%, #490e0f);
+.main-title {
+  text-align: center;
+  font-size: xxx-large;
+  margin-bottom: 2em;
 }
 
-.container {
-    background: url(https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg) no-repeat;
-    background-position: bottom;
-    width: 100vw;
-    height: 100vh;
+.main-title-hub {
+  color: brown;
 }
 
-.container .titulo {
-    color: whitesmoke;
-    font-size: 3em;
-    text-align: center;
-    padding-top: 1.5em;
-    user-select: none;
-    margin-bottom: 0.5em;
+.container-main {
+  display: flex;
+  flex-direction: column;
 }
 
-h4 {
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 0.5em;
+#username-input {
+  margin-top: 0.4em;
+  border: thin solid #333;
+  padding: 0.5em 0.4em;
+  width: 100%;
+  font-size: large;
+  border-radius: 0.7em;
 }
 
-.titulo span {
-    color: #DF2E31;
-    font-size: 1.2em;
-}
-
-form {
-    text-align: center;
-}
-
-form input#campo {
-    display: block;
-    border: 0;
-    border-radius: 1.8em;
-    width: 18em;
-    color: #DF2E31;
-    font-weight: bolder;
-    text-align: center;
-    margin: auto;
-    font-size: 1.3em;
-    outline: none;
-    height: 2.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-bottom: 0.5em;
-}
-
-form button {
-    border: 0;
-    padding: 1em 4em;
-    border-radius: 1.8em;
-    background-color: #DF2E31;
-    color: white;
-    outline: none;
-    transition: all 0.4s ease-out;
-}
-
-form button:hover {
-    filter: brightness(0.8);
+.btn {
+  border: none;
+  background-color: brown;
+  color: antiquewhite;
+  font-size: x-large;
+  text-align: center;
+  margin: 1em auto;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
