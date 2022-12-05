@@ -1,15 +1,23 @@
-<div class="container">
-  <button type="button" class="btn" routerLink="/">Voltar</button>
-  <div
-    [title]="userRepo.name"
-    class="item animate__animated animate__bounceIn"
-    *ngFor="let userRepo of userRepos | async"
-  >
-    <h3 class="item-name">{{ userRepo.name }}</h3>
-    <p class="item-description">{{ userRepo.description }}</p>
-    <a>{{ userRepo.html_url }}</a>
-    <h4 class="item-language">{{ userRepo.language }}</h4>
-    <p class="item-date">{{ userRepo.created_at }}</p>
-    <p>{{ userRepo.owner.login }}</p>
+<div class="body">
+  <div class="container">
+    <div class="header">
+      <h2 class="title">Repositórios de {{ username }}</h2>
+      <button type="button" class="btn" routerLink="/">Voltar</button>
+    </div>
+    <div
+      [title]="userRepo.name"
+      class="item animate__animated animate__bounceIn"
+      *ngFor="let userRepo of userRepos | async"
+    >
+      <a class="a-ref" href="{{ userRepo.html_url }}" target="_blank">
+        <h3 class="item-name">{{ userRepo.name }}</h3>
+        <p *ngIf="userRepo.description" class="item-description">
+          Descrição: {{ userRepo.description }}
+        </p>
+        <h4 class="item-language">{{ userRepo.language }}</h4>
+        <p class="item-date">{{ userRepo.created_at }}</p>
+        <p>{{ userRepo.owner.login }}</p>
+      </a>
+    </div>
   </div>
 </div>
